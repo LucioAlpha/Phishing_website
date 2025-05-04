@@ -7,28 +7,126 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f7f7f5; /* 類似 Notion 的淺灰色背景 */
-    color: #37352f; /* Notion 的主要文字顏色 */
-    display: flex; /* 使用 Flexbox */
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
-    min-height: 100vh; /* 確保 body 至少和視窗一樣高 */
-    padding: 20px; /* 在視窗邊緣留點空間 */
+    /* background-color: #f7f7f5; <-- 移除或註解掉 */
+    background-color: white; /* **** 修改: 設定背景為白色 **** */
+    color: #37352f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
+
+/* Header 樣式 */
+header {
+    width: 100%;
+    padding: 12px 24px;
+    display: flex;
+    /* justify-content: space-between; <-- **** 移除或註解掉 **** */
+    align-items: center;
+    background-color: white; /* 背景也是白色，與 body 一致 */
+    border-bottom: 1px solid #eee; /* 保留底線以區分 Header 區域 */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    gap: 20px; /* **** 新增: 在 Logo 和語言選單之間添加間距 **** */
+}
+
+.logo {
+    /* Logo 樣式不變 */
+    font-size: 18px;
+    font-weight: bold;
+    border: 1.5px solid black;
+    padding: 4px 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* ... (保留 header, logo 等樣式) ... */
+
+.language-selector {
+    position: relative; /* **** 新增: 讓絕對定位的下拉選單相對於此 **** */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.language-selector:hover {
+    background-color: #f0f0f0;
+}
+
+.language-selector .arrow-icon {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+/* 下拉選單樣式 */
+.language-dropdown {
+    display: none; /* **** 確保預設隱藏 **** */
+    position: absolute;
+    top: 100%; /* 出現在觸發器下方 */
+    left: 0;  /* 從觸發器左側開始 */
+    min-width: 150px; /* 設定最小寬度 */
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 更明顯的陰影 */
+    list-style: none;
+    padding: 6px 0; /* 上下留白 */
+    margin-top: 6px; /* 與觸發器分開一點 */
+    z-index: 100; /* 確保在其他元素之上 */
+    max-height: 200px; /* 如果選項很多，可以加個最大高度和滾動條 */
+    overflow-y: auto;
+}
+
+/* 新增 .show class 來顯示下拉選單 */
+.language-dropdown.show {
+    display: block;
+}
+
+.language-dropdown li a {
+    display: block;
+    padding: 8px 15px; /* 選項的內邊距 */
+    color: #37352f;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap; /* 防止文字換行 */
+    transition: background-color 0.2s ease;
+}
+
+.language-dropdown li a:hover {
+    background-color: #f0f0f0; /* 選項的滑鼠懸停效果 */
+}
+
+
+/* ... (保留 login-container, social-logins 等其他樣式) ... */
 
 /* 主要登入區塊 */
 .login-container {
-    background-color: white; /* 白色背景 */
+    /* login-container 樣式不變，背景色也是白色 */
+    /* 如果不想要陰影效果，可以移除 box-shadow */
+    background-color: white;
     padding: 40px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 細微陰影 */
-    width: 100%; /* 預設寬度 */
-    max-width: 400px; /* 最大寬度 */
-    display: flex; /* 使用 Flexbox */
-    flex-direction: column; /* 內部元素垂直排列 */
-    align-items: center; /* 內部元素水平居中 (對文字、按鈕等有效) */
-    text-align: center; /* 文字居中 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 保留陰影以區分區塊 */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
+
+/* ... 其他樣式保持不變 ... */
 
 h1 {
     font-size: 24px;
@@ -38,67 +136,63 @@ h1 {
 
 .subtitle {
     font-size: 16px;
-    color: #787774; /* 次要文字顏色 */
+    color: #787774;
     margin-bottom: 24px;
 }
 
-/* 社群/其他登入按鈕區塊 */
 .social-logins {
-    width: 100%; /* 佔滿容器寬度 */
+    width: 100%;
     display: flex;
-    flex-direction: column; /* 按鈕垂直排列 */
-    gap: 10px; /* 按鈕間距 */
+    flex-direction: column;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
 .social-button {
-    display: flex; /* 使用 Flexbox 排列圖示和文字 */
-    align-items: center; /* 垂直居中對齊 */
-    justify-content: center; /* 水平居中對齊 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 10px 15px;
-    border: 1px solid #e3e2e0; /* 邊框顏色 */
+    border: 1px solid #e3e2e0;
     border-radius: 4px;
     background-color: white;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease;
-    gap: 8px; /* 圖示和文字間距 */
+    gap: 8px;
 }
 
 .social-button i {
-    font-size: 16px; /* 圖示大小 */
-    width: 18px; /* 固定圖示寬度方便對齊 */
+    font-size: 16px;
+    width: 18px;
     text-align: center;
 }
 
-/* 特定按鈕顏色 (可選) */
 .social-button.google i { color: #DB4437; }
 .social-button.apple i { color: #000000; }
 .social-button.microsoft i { color: #0078D4; }
-/* 其他圖示預設顏色 */
+
 
 .social-button:hover {
-    background-color: #f7f7f5; /* 滑鼠懸停效果 */
+    background-color: #f7f7f5; /* 這裡可以用回淺灰色做 hover */
     border-color: #dcdbd9;
 }
 
-/* 分隔線 */
 .divider {
     border: none;
-    border-top: 1px solid #eee; /* 分隔線顏色 */
+    border-top: 1px solid #eee;
     width: 100%;
     margin: 20px 0;
 }
 
-/* Email 表單 */
 #login-form {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 標籤靠左 */
-    text-align: left; /* 表單內文字靠左 */
+    align-items: flex-start;
+    text-align: left;
 }
 
 #login-form label {
@@ -119,7 +213,7 @@ h1 {
 
 #login-form input[type="email"]:focus {
     outline: none;
-    border-color: #2e9af7; /* 輸入框聚焦時的邊框顏色 */
+    border-color: #2e9af7;
     box-shadow: 0 0 0 2px rgba(46, 154, 247, 0.2);
 }
 
@@ -127,7 +221,7 @@ h1 {
     font-size: 12px;
     color: #787774;
     margin-bottom: 16px;
-    text-align: left; /* 確保輔助文字靠左 */
+    text-align: left;
     width: 100%;
 }
 
@@ -136,28 +230,27 @@ h1 {
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
-    background-color: #2e9af7; /* 主要按鈕顏色 */
+    background-color: #2e9af7;
     color: white;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    margin-bottom: 20px; /* 與下方條款的間距 */
+    margin-bottom: 20px;
 }
 
 .continue-button:hover {
-    background-color: #1a8ae0; /* 滑鼠懸停效果 */
+    background-color: #1a8ae0;
 }
 
-/* 條款文字 */
 .terms {
     font-size: 12px;
-    color: #a9a8a4; /* 更淡的文字顏色 */
+    color: #a9a8a4;
     line-height: 1.5;
 }
 
 .terms a {
-    color: #787774; /* 連結顏色 */
+    color: #787774;
     text-decoration: underline;
 }
 
@@ -165,20 +258,27 @@ h1 {
     color: #37352f;
 }
 
-/* 響應式設計：螢幕寬度小於 600px 時 (例如手機) */
+
+/* 響應式設計 */
 @media (max-width: 600px) {
     body {
-        align-items: flex-start; /* 在小螢幕上，讓容器從頂部開始 */
-        padding: 0; /* 移除 body 的 padding */
+        /* 樣式維持不變 */
+    }
+
+    header {
+        padding: 10px 15px;
+        gap: 15px; /* 可稍微縮小間距 */
     }
 
     .login-container {
-        max-width: none; /* 取消最大寬度限制 */
-        width: 100%; /* 佔滿螢幕寬度 */
-        min-height: 100vh; /* 佔滿螢幕高度 */
-        border-radius: 0; /* 移除圓角 */
-        box-shadow: none; /* 移除陰影 */
-        padding: 40px 20px; /* 調整 padding */
-        justify-content: center; /* 確保內容在垂直方向上也是居中的 */
+        max-width: none;
+        width: 100%;
+        min-height: calc(100vh - 50px); /* 確保高度計算正確 */
+        border-radius: 0;
+        box-shadow: none; /* 小螢幕通常移除陰影 */
+        padding: 30px 15px;
+        margin-top: 0;
+        justify-content: center;
+        border-top: none;
     }
 }
