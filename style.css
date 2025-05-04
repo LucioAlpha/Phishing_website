@@ -24,7 +24,7 @@ header {
     /* justify-content: space-between; <-- **** 移除或註解掉 **** */
     align-items: center;
     background-color: white; /* 背景也是白色，與 body 一致 */
-    border-bottom: 1px solid #eee; /* 保留底線以區分 Header 區域 */
+    /*border-bottom: 1px solid #eee; !* 保留底線以區分 Header 區域 *!*/
     position: sticky;
     top: 0;
     z-index: 10;
