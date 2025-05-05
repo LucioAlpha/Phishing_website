@@ -144,9 +144,9 @@ h1 {
 .social-button {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* 移除 justify-content: center; */
     width: 100%;
-    padding: 10px 15px;
+    padding: 10px 15px; /* 保留左右內邊距 */
     border: 1px solid #e3e2e0;
     border-radius: 4px;
     background-color: white;
@@ -154,13 +154,23 @@ h1 {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease;
-    gap: 8px;
+    gap: 8px; /* 保留圖標和文字之間的間距 */
+    /* 您可能希望增加圖標左側的內邊距，或者通過調整 padding 來實現 */
+    /* padding: 10px 20px; /* 範例：增加左右內邊距 */
 }
 
+/* 添加這段新的 CSS 規則 */
+.social-button span {
+    flex-grow: 1; /* 讓文字 span 元素佔滿圖標右側的剩餘空間 */
+    text-align: center; /* 將 span 元素內部的文本內容置中 */
+}
+
+/* 原有的 .social-button i 樣式，保持不變 */
 .social-button i {
     font-size: 16px;
-    width: 18px;
+    width: 18px; /* 確保圖標有一個固定的寬度，這有助於文字佔據正確的剩餘空間 */
     text-align: center;
+    flex-shrink: 0; /* 防止圖標在空間不足時縮小 */
 }
 
 .social-button.google i { color: #DB4437; }
