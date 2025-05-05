@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'langName_fr': 'Français',
 
             'pageTitle': 'Notion - 登入',
-            'mainHeading': '發想。建立。',
+            'mainHeading': '巧思妙想，化為現實。',
             'subtitle': '登入您的 Notion 帳戶',
             'continueWithGoogle': '使用 Google 繼續',
             'continueWithApple': '使用 Apple 繼續',

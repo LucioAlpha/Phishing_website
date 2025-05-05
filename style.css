@@ -120,6 +120,7 @@ h1 {
     margin-bottom: 8px;
     text-align: left; /* 將 h1 靠左對齊 */
     width: 100%; /* 確保 h1 與按鈕相同寬度 */
+    font-weight: 500; /* 粗體字 */
 }
 
 .subtitle {
@@ -128,6 +129,8 @@ h1 {
     margin-bottom: 24px;
     text-align: left;
     width: 100%; /* 確保 subtitle 與按鈕相同寬度 */
+    /* 粗體字 */
+    font-weight: 500;
 }
 
 .social-logins {
