@@ -7,8 +7,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    /* background-color: #f7f7f5; <-- 移除或註解掉 */
-    background-color: white; /* **** 修改: 設定背景為白色 **** */
+    background-color: white;
     color: #37352f;
     display: flex;
     flex-direction: column;
@@ -21,18 +20,15 @@ header {
     width: 100%;
     padding: 12px 24px;
     display: flex;
-    /* justify-content: space-between; <-- **** 移除或註解掉 **** */
     align-items: center;
-    background-color: white; /* 背景也是白色，與 body 一致 */
-    /*border-bottom: 1px solid #eee; !* 保留底線以區分 Header 區域 *!*/
+    background-color: white;
     position: sticky;
     top: 0;
     z-index: 10;
-    gap: 20px; /* **** 新增: 在 Logo 和語言選單之間添加間距 **** */
+    gap: 20px;
 }
 
 .logo {
-    /* Logo 樣式不變 */
     font-size: 18px;
     font-weight: bold;
     border: 1.5px solid black;
@@ -43,10 +39,8 @@ header {
     line-height: 1;
 }
 
-/* ... (保留 header, logo 等樣式) ... */
-
 .language-selector {
-    position: relative; /* **** 新增: 讓絕對定位的下拉選單相對於此 **** */
+    position: relative;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -69,53 +63,47 @@ header {
 
 /* 下拉選單樣式 */
 .language-dropdown {
-    display: none; /* **** 確保預設隱藏 **** */
+    display: none;
     position: absolute;
-    top: 100%; /* 出現在觸發器下方 */
-    left: 0;  /* 從觸發器左側開始 */
-    min-width: 150px; /* 設定最小寬度 */
+    top: 100%;
+    left: 0;
+    min-width: 150px;
     background-color: white;
     border: 1px solid #eee;
     border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 更明顯的陰影 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     list-style: none;
-    padding: 6px 0; /* 上下留白 */
-    margin-top: 6px; /* 與觸發器分開一點 */
-    z-index: 100; /* 確保在其他元素之上 */
-    max-height: 200px; /* 如果選項很多，可以加個最大高度和滾動條 */
+    padding: 6px 0;
+    margin-top: 6px;
+    z-index: 100;
+    max-height: 200px;
     overflow-y: auto;
 }
 
-/* 新增 .show class 來顯示下拉選單 */
 .language-dropdown.show {
     display: block;
 }
 
 .language-dropdown li a {
     display: block;
-    padding: 8px 15px; /* 選項的內邊距 */
+    padding: 8px 15px;
     color: #37352f;
     text-decoration: none;
     font-size: 14px;
-    white-space: nowrap; /* 防止文字換行 */
+    white-space: nowrap;
     transition: background-color 0.2s ease;
 }
 
 .language-dropdown li a:hover {
-    background-color: #f0f0f0; /* 選項的滑鼠懸停效果 */
+    background-color: #f0f0f0;
 }
-
-
-/* ... (保留 login-container, social-logins 等其他樣式) ... */
 
 /* 主要登入區塊 */
 .login-container {
-    /* login-container 樣式不變，背景色也是白色 */
-    /* 如果不想要陰影效果，可以移除 box-shadow */
     background-color: white;
     padding: 40px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 保留陰影以區分區塊 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     width: 100%;
     max-width: 400px;
     display: flex;
@@ -126,18 +114,20 @@ header {
     margin-bottom: 40px;
 }
 
-/* ... 其他樣式保持不變 ... */
-
 h1 {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 8px;
+    text-align: left; /* 將 h1 靠左對齊 */
+    width: 100%; /* 確保 h1 與按鈕相同寬度 */
 }
 
 .subtitle {
     font-size: 16px;
     color: #787774;
     margin-bottom: 24px;
+    text-align: left;
+    width: 100%; /* 確保 subtitle 與按鈕相同寬度 */
 }
 
 .social-logins {
@@ -174,9 +164,8 @@ h1 {
 .social-button.apple i { color: #000000; }
 .social-button.microsoft i { color: #0078D4; }
 
-
 .social-button:hover {
-    background-color: #f7f7f5; /* 這裡可以用回淺灰色做 hover */
+    background-color: #f7f7f5;
     border-color: #dcdbd9;
 }
 
@@ -258,7 +247,6 @@ h1 {
     color: #37352f;
 }
 
-
 /* 響應式設計 */
 @media (max-width: 600px) {
     body {
@@ -267,15 +255,15 @@ h1 {
 
     header {
         padding: 10px 15px;
-        gap: 15px; /* 可稍微縮小間距 */
+        gap: 15px;
     }
 
     .login-container {
         max-width: none;
         width: 100%;
-        min-height: calc(100vh - 50px); /* 確保高度計算正確 */
+        min-height: calc(100vh - 50px);
         border-radius: 0;
-        box-shadow: none; /* 小螢幕通常移除陰影 */
+        box-shadow: none;
         padding: 30px 15px;
         margin-top: 0;
         justify-content: center;
