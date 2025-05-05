@@ -1,0 +1,81 @@
+{
+  "en": {
+    "langName_en": "English",
+    "langName_zh-TW": "繁體中文",
+    "langName_ja": "日本語",
+    "langName_es": "Español",
+    "langName_fr": "Français",
+
+    "pageTitle": "Notion - Log in",
+    "mainHeading": "Think it. Make it.",
+    "subtitle": "Log in to your Notion account",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithApple": "Continue with Apple",
+    "continueWithMicrosoft": "Continue with Microsoft",
+    "loginWithPasskey": "Log in with passkey",
+    "singleSignOn": "Single sign-on (SSO)",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email address...",
+    "helperText": "Use an organizational email to easily collaborate with teammates.",
+    "continueButton": "Continue",
+    "termsText": "By continuing, you acknowledge that you understand and agree to the {termsLink} and {privacyLink}.",
+    "termsLinkText": "Terms & Conditions",
+    "privacyLinkText": "Privacy Policy",
+
+    "alertEmailRequired": "Please enter your email address",
+    "alertLoginSimulated": "Will proceed with Email: {email} (This is a frontend simulation)"
+  },
+  "zh-TW": {
+    "langName_en": "English",
+    "langName_zh-TW": "繁體中文",
+    "langName_ja": "日本語",
+    "langName_es": "Español",
+    "langName_fr": "Français",
+
+    "pageTitle": "Notion - 登入",
+    "mainHeading": "發想。建立。",
+    "subtitle": "登入您的 Notion 帳戶",
+    "continueWithGoogle": "使用 Google 繼續",
+    "continueWithApple": "使用 Apple 繼續",
+    "continueWithMicrosoft": "使用 Microsoft 繼續",
+    "loginWithPasskey": "使用 Passkey 登入",
+    "singleSignOn": "單一登入 (SSO)",
+    "emailLabel": "電子郵件",
+    "emailPlaceholder": "輸入您的電子郵件地址...",
+    "helperText": "使用組織電子郵件可以輕鬆與團隊成員協作。",
+    "continueButton": "繼續",
+    "termsText": "繼續操作即代表您瞭解並同意{termsLink}及{privacyLink}。",
+    "termsLinkText": "服務條款",
+    "privacyLinkText": "隱私權政策",
+
+    "alertEmailRequired": "請輸入您的電子郵件地址",
+    "alertLoginSimulated": "將使用 Email: {email} 繼續登入 (這只是前端模擬)"
+  },
+  "ja": {
+    "langName_en": "English",
+    "langName_zh-TW": "繁體中文",
+    "langName_ja": "日本語",
+    "langName_es": "Español",
+    "langName_fr": "Français",
+
+    "pageTitle": "Notion - ログイン",
+    "mainHeading": "考えて、作ろう。",
+    "subtitle": "Notionアカウントにログイン",
+    "continueWithGoogle": "Googleで続行",
+    "continueWithApple": "Appleで続行",
+    "continueWithMicrosoft": "Microsoftで続行",
+    "loginWithPasskey": "パスキーでログイン",
+    "singleSignOn": "シングルサインオン (SSO)",
+    "emailLabel": "メール",
+    "emailPlaceholder": "メールアドレスを入力...",
+    "helperText": "組織のメールアドレスを使用すると、チームメイトとの共同作業が簡単になります。",
+    "continueButton": "続行",
+    "termsText": "続行すると、{termsLink}および{privacyLink}を理解し同意したことになります。",
+    "termsLinkText": "利用規約",
+    "privacyLinkText": "プライバシーポリシー",
+
+    "alertEmailRequired": "メールアドレスを入力してください",
+    "alertLoginSimulated": "メールアドレス: {email} でログインを続行します (これはフロントエンドのシミュレーションです)"
+  }
+  // 您可以在這裡添加更多語言，使用其語言代碼作為 key
+}

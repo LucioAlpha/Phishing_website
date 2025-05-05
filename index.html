@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-<head>
+<html lang="zh-TW"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notion - Log in</title>
-    <link rel="stylesheet" href="style.css">
+    <title data-i18n="pageTitle">Notion - Log in</title> <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -16,54 +14,36 @@
     <div class="language-selector" id="language-selector-trigger"> <i class="fas fa-globe"></i>
         <span id="selected-language">English</span> <i class="fas fa-chevron-down arrow-icon"></i>
         <ul class="language-dropdown" id="language-dropdown">
-            <li><a href="#" data-lang="English">English</a></li>
-            <li><a href="#" data-lang="繁體中文">繁體中文</a></li>
-            <li><a href="#" data-lang="日本語">日本語</a></li>
-            <li><a href="#" data-lang="Español">Español</a></li>
-            <li><a href="#" data-lang="Français">Français</a></li>
-        </ul>
+            <li><a href="#" data-lang="en">English</a></li> <li><a href="#" data-lang="zh-TW">繁體中文</a></li> <li><a href="#" data-lang="ja">日本語</a></li>     <li><a href="#" data-lang="es">Español</a></li>    <li><a href="#" data-lang="fr">Français</a></li>   </ul>
     </div>
 </header>
 <div class="login-container">
-    <h1>Think it. Make it.</h1>
-    <p class="subtitle">Log in to your Notion account</p>
-
-    <div class="social-logins">
-        <button class="social-button google">
-            <i class="fab fa-google"></i>
-            <span>Continue with Google</span>
-        </button>
-        <button class="social-button apple">
-            <i class="fab fa-apple"></i>
-            <span>Continue with Apple</span>
-        </button>
-        <button class="social-button microsoft">
-            <i class="fab fa-microsoft"></i>
-            <span>Continue with Microsoft</span>
-        </button>
-        <button class="social-button passkey">
-            <i class="fas fa-key"></i>
-            <span>Log in with passkey</span>
-        </button>
-        <button class="social-button sso">
-            <i class="fas fa-building"></i>
-            <span>Single sign-on (SSO)</span>
-        </button>
-    </div>
+    <h1 data-i18n="mainHeading">Think it. Make it.</h1> <p class="subtitle" data-i18n="subtitle">Log in to your Notion account</p> <div class="social-logins">
+    <button class="social-button google">
+        <i class="fab fa-google"></i>
+        <span data-i18n="continueWithGoogle">Continue with Google</span> </button>
+    <button class="social-button apple">
+        <i class="fab fa-apple"></i>
+        <span data-i18n="continueWithApple">Continue with Apple</span> </button>
+    <button class="social-button microsoft">
+        <i class="fab fa-microsoft"></i>
+        <span data-i18n="continueWithMicrosoft">Continue with Microsoft</span> </button>
+    <button class="social-button passkey">
+        <i class="fas fa-key"></i>
+        <span data-i18n="loginWithPasskey">Log in with passkey</span> </button>
+    <button class="social-button sso">
+        <i class="fas fa-building"></i>
+        <span data-i18n="singleSignOn">Single sign-on (SSO)</span> </button>
+</div>
 
     <hr class="divider">
 
     <form id="login-form">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email address..." required>
-        <p class="helper-text">Use an organizational email to easily collaborate with teammates.</p>
-        <button type="submit" class="continue-button">Continue</button>
-    </form>
+        <label for="email" data-i18n="emailLabel">Email</label> <input type="email" id="email" name="email" placeholder="Enter your email address..." required data-i18n-placeholder="emailPlaceholder"> <p class="helper-text" data-i18n="helperText">Use an organizational email to easily collaborate with teammates.</p> <button type="submit" class="continue-button" data-i18n="continueButton">Continue</button> </form>
 
-    <p class="terms">
-        By continuing, you acknowledge that you understand and agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>.
-    </p>
-</div>
+    <p class="terms" data-i18n="termsText">
+        By continuing, you acknowledge that you understand and agree to the <a href="#" data-i18n="termsLinkText">Terms & Conditions</a> and <a href="#" data-i18n="privacyLinkText">Privacy Policy</a>.
+    </p> </div>
 
 <script src="script.js"></script>
 </body>
